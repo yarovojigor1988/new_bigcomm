@@ -85,6 +85,13 @@
     color: stencilColor("color_text_product_sale_badges");
 }
 
+
+.custom_sale-text-burst {
+    @extend %base-text-burst;
+    color: stencilColor("color_text_product_sale_custom_badges");
+}
+
+
 .sold-out-text-burst {
     @extend %base-text-burst;
     color: stencilColor("color_text_product_sold_out_badges");
@@ -102,6 +109,12 @@
     .sold-out-flag-star::after {
         background: stencilColor("color_hover_product_sold_out_badges");
     }    
+
+    .custom_sale-flag-star,
+    .customsale-flag-star::before,
+    .customsale-flag-star::after {
+        background: stencilColor("color_hover_product_custom_sale_badges");
+    }
 }
 
 // -----------------------------------------------------------------------------
@@ -170,6 +183,7 @@
 
 .listItem-figure {
     .sale-flag-sash,
+    .custom_sale-flag-sash,
     .sold-out-flag-sash {
         top: 24px;
 
@@ -196,4 +210,66 @@
 
 .product {
     overflow: hidden;
+}
+
+
+// =============================================================================
+// CUSTOM Badges (CSS)
+// =============================================================================
+
+
+.custom_sale-flag-side {
+    @extend %base-flag-side;
+    @include setFlagColors("color_badge_product_sale_custom_badges", "color_text_product_sale_custom_badges");
+}
+
+.product:hover .custom_sale-flag-side {
+    background: stencilColor("color_hover_product_custom_sale_badges");
+}
+
+.custom_new-flag-side {
+    @extend %base-flag-side;
+    @include setFlagColors("color_badge_product_custom_new_badges", "color_text_product_custom_new_badges");
+}
+
+.product:hover .custom_new-flag-side {
+    background: stencilColor("color_hover_product_custom_new_badges");
+}
+
+.free_shipping-flag-side {
+    @extend %base-flag-side;
+    @include setFlagColors("color_badge_product_free_ship_badges", "color_text_product_free_ship_badges");
+}
+
+.product:hover .free_shipping-flag-side {
+    background: stencilColor("color_hover_product_free_ship_badges");
+}
+
+
+.closeout-flag-side {
+    @extend %base-flag-side;
+    @include setFlagColors("color_badge_product_closeout_badges", "color_text_product_closeout_badges");
+}
+
+.product:hover .closeout-flag-side {
+    background: stencilColor("color_hover_product_closeout_badges");
+}
+
+
+
+.custom_sale-flag-sash {
+    @extend %base-flag-sash;
+    @include setFlagColors("color_badge_product_sale_custom_badges", "color_text_product_sale_custom_badges");
+}
+
+
+.product:hover .custom_sale-flag-sash {
+    background: stencilColor("color_hover_product_custom_sale_badges");
+}
+
+.custom_sale-flag-star,
+.custom_sale-flag-star::before,
+.custom_sale-flag-star::after {
+    @extend %base-flag-star;
+    background: stencilColor("color_badge_product_sale_custom_badges");
 }

@@ -6,6 +6,7 @@ products:
         limit: {{theme_settings.homepage_featured_products_count}}
     top_sellers:
         limit: {{theme_settings.homepage_top_products_count}}
+
 carousel: {{theme_settings.homepage_show_carousel}}
 blog:
     recent_posts:
@@ -17,13 +18,20 @@ blog:
         {{> components/carousel arrows=theme_settings.homepage_show_carousel_arrows play_pause_button=theme_settings.homepage_show_carousel_play_pause_button}}
     {{/and}}
     {{{region name="home_below_carousel"}}}
+
+    {{{region name="home_custom_slider"}}}
+    
+    {{> components/custom/customCarousel }}
 {{/partial}}
+
 
 {{#partial "page"}}
 
     {{#each shipping_messages}}
         {{> components/common/alert/alert-info message}}
     {{/each}}
+
+
 
 <div class="main full">
     {{#if products.featured}}
@@ -40,6 +48,17 @@ blog:
         {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
     {{/if}}
     {{{region name="home_below_new_products"}}}
+
+    <div>{{ products.new}}</div>
+
+    <ul class="people_list">
+        {{#each products.new}}
+          <li>{{this.sku}}</li>
+          
+        {{/each}}
+      </ul>
+      {{> components/products/new products=products.new columns=5}}
+
 </div>
 {{/partial}}
 {{> layout/base}}

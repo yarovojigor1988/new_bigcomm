@@ -54,7 +54,6 @@ export default class ProductDetails extends ProductDetailsBase {
             this.registerAddToCartValidation();
             $.each($productSwatchLabels, placeSwatchLabelImage);
         });
-
         if (context.showSwatchNames) {
             this.$swatchOptionMessage.removeClass('u-hidden');
 

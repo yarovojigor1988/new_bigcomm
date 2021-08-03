@@ -1223,6 +1223,201 @@
     "settings": [
       {
         "type": "heading",
+        "content": "Product Custom Badges"
+      },
+      {
+        "type": "select",
+        "label": "Show Custom Product Sale Badges",
+        "id": "product_custom_sale_badges",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "none",
+            "label": "i18n.None"
+          },
+          {
+            "value": "topleft",
+            "label": "i18n.TopLeft"
+          },
+          {
+            "value": "sash",
+            "label": "i18n.Diagonal"
+          },
+          {
+            "value": "burst",
+            "label": "i18n.Burst"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Custom Product Sale Badges Label",
+        "force_reload": true,
+        "id": "pdp_custom_sale_badge_label",
+        "reference": "product_custom_sale_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Custom Badge text color",
+        "id": "color_text_product_sale_custom_badges",
+        "reference": "product_custom_sale_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Custom Badge color",
+        "id": "color_badge_product_sale_custom_badges",
+        "reference": "product_custom_sale_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Custom Badge hover color",
+        "id": "color_hover_product_custom_sale_badges",
+        "reference": "product_custom_sale_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "select",
+        "label": "Show Custom Product Free shiping Badges",
+        "id": "product_custom_free_ship_badges",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "none",
+            "label": "i18n.None"
+          },
+          {
+            "value": "topleft",
+            "label": "i18n.TopLeft"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "Custom Product Free shiping Badges Label",
+        "force_reload": true,
+        "id": "pdp_custom_free_ship_badge_label",
+        "reference": "product_custom_free_ship_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Free shiping Badge text color",
+        "id": "color_text_product_free_ship_badges",
+        "reference": "product_custom_free_ship_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Free shiping Badge color",
+        "id": "color_badge_product_free_ship_badges",
+        "reference": "product_custom_free_ship_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "Free shiping Badge hover color",
+        "id": "color_hover_product_free_ship_badges",
+        "reference": "product_custom_free_ship_badges",
+        "reference_default": "none"
+      },
+
+      {
+        "type": "select",
+        "label": "Show Custom New Product Badges",
+        "id": "product_custom_new_badges",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "none",
+            "label": "i18n.None"
+          },
+          {
+            "value": "topleft",
+            "label": "i18n.TopLeft"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "New Product Badges Label",
+        "force_reload": true,
+        "id": "pdp_custom_new_badge_label",
+        "reference": "product_custom_new_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New Badge text color",
+        "id": "color_text_product_custom_new_badges",
+        "reference": "product_custom_new_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New product Badge color",
+        "id": "color_badge_product_custom_new_badges",
+        "reference": "product_custom_new_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New product hover color",
+        "id": "color_hover_product_custom_new_badges",
+        "reference": "product_custom_new_badges",
+        "reference_default": "none"
+      },
+
+      {
+        "type": "select",
+        "label": "Show Closeout Product Badges",
+        "id": "product_closeout_badges",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "none",
+            "label": "i18n.None"
+          },
+          {
+            "value": "topleft",
+            "label": "i18n.TopLeft"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "label": "New Product Badges Label",
+        "force_reload": true,
+        "id": "pdp_custom_closeout_label",
+        "reference": "product_closeout_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New Badge text color",
+        "id": "color_text_product_closeout_badges",
+        "reference": "product_closeout_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New product Badge color",
+        "id": "color_badge_product_closeout_badges",
+        "reference": "product_closeout_badges",
+        "reference_default": "none"
+      },
+      {
+        "type": "color",
+        "label": "New product hover color",
+        "id": "color_hover_product_closeout_badges",
+        "reference": "product_closeout_badges",
+        "reference_default": "none"
+      },
+
+      {
+        "type": "heading",
         "content": "i18n.ProductSaleBadges"
       },
       {

@@ -13,6 +13,7 @@
 {{/if}}
     <figure class="listItem-figure">
         <a href="{{url}}"
+           id="product{{ id }}"
            class="listItem-figure__link"
            aria-label="{{name}},{{> components/products/product-aria-label}}"
            {{#if settings.data_tag_enabled}}
@@ -30,11 +31,11 @@
         {{else}}
             {{#or price.sale_price_with_tax.value price.sale_price_without_tax.value}}
                 {{> components/products/product-badge
-                    badge-type='sale'
-                    badge_view=theme_settings.product_sale_badges
-                    badge_label=theme_settings.pdp_sale_badge_label
-                    page_builder_key="pdp_sale_badge_label"
-                    default_translation=(lang "page_builder.pdp_sale_badge_label")
+                    badge-type='custom_sale'
+                    badge_view=theme_settings.product_custom_sale_badges
+                    badge_label=theme_settings.pdp_custom_sale_badge_label
+                    page_builder_key="pdp_custom_sale_badge_label"
+                    default_translation=("Custom sale")
                 }}
             {{/or}}
         {{/if}}
@@ -45,6 +46,7 @@
             lazyload=theme_settings.lazyload_mode
             default_image=theme_settings.default_image_product
         }}
+        
         </a>
         {{#unless hide_product_quick_view}}
             {{#if theme_settings.show_product_quick_view}}
@@ -54,6 +56,7 @@
             {{/if}}
         {{/unless}}
     </figure>
+
     <div class="listItem-body">
         <div class="listItem-content">
             <div class="listItem-details">
@@ -106,3 +109,70 @@
         </div>
     </div>
 </article>
+
+
+{{inject "myProductDate" this.date_added}}
+{{inject "myProductID" this.id}}
+{{inject "myProductCustomFields" this.custom_fields}}
+{{inject "myNewBanText" theme_settings.pdp_custom_new_badge_label}}
+{{inject "myNewBandage" theme_settings.product_custom_new_badges}}
+{{inject "myCloseuotBandage" theme_settings.product_closeout_badges}}
+{{inject "myCloseuotText" theme_settings.pdp_custom_closeout_label}}
+{{inject "myFreeShipBandage" theme_settings.product_custom_free_ship_badges }}
+{{inject "myFreeShipText" theme_settings.pdp_custom_free_ship_badge_label}}
+
+
+
+<script>
+var jsContext = JSON.parse({{jsContext}});
+
+if (jsContext.myNewBandage === "topleft") {
+    let dat = jsContext.myProductDate;
+    let dat3 = new Date(dat.slice(5, 8) + " " + dat.slice(0, 2) + "," + dat.slice(9, 13));
+    let date_now = new Date();
+    if ((date_now - dat3)/24/60/60/1000 <= 5 ) {
+        if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+            document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="custom_new-flag-side" style="top:5px">
+            <span class="custom_new-text" data-page-builder-key="pdp_custom_new_label" data-default-translation="Sold Out">
+                `+jsContext.myNewBanText+ `
+            </span>
+        </div>`
+        }
+    }
+}
+if (jsContext.myFreeShipBandage === "topleft") {
+    let dat = jsContext.myProductDate;
+    if (jsContext.myProductCustomFields){
+        jsContext.myProductCustomFields.forEach(el => {
+            if (el.name === "__badge" && el.value === "FreeShipping") {
+                if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="free_shipping-flag-side" style="top:5px">
+                    <span class="free_shipping-text" data-page-builder-key="pdp_free_shipping_label" data-default-translation="Free Shipping">
+                        `+jsContext.myFreeShipText+ `
+                    </span>
+                </div>`
+                }
+            }
+        });
+    }
+}
+
+if (jsContext.myCloseuotBandage === "topleft") {
+    let dat = jsContext.myProductDate;
+    if (jsContext.myProductCustomFields){
+
+        jsContext.myProductCustomFields.forEach(el => {
+            if (el.name === "__badge" && el.value === "Closeout") {
+                if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="closeout-flag-side" style="top:5px">
+                    <span class="closeout-text" data-page-builder-key="pdp_sold_out_label" data-default-translation="Sold Out">
+                        `+jsContext.myCloseuotText+ `
+                    </span>
+                </div>`
+                }
+            }
+        });
+    }
+}
+
+</script>

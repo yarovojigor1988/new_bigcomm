@@ -4,6 +4,7 @@ module.exports = api => {
         plugins: [
             '@babel/plugin-syntax-dynamic-import', // add support for dynamic imports (used in app.js)
             'lodash', // Tree-shake lodash
+            "graphql-tag",
         ],
         presets: [
             ['@babel/preset-env', {

@@ -226,35 +226,9 @@
                 <input type="hidden" name="product_id" value="{{product.id}}"/>
                 <div data-product-option-change style="display:none;">
                     {{inject 'showSwatchNames' theme_settings.show_product_swatch_names}}
-                    {{#if customer}}
-                        {{#if product.price.without_tax.value '>=' 50}}
-                            {{#each product.options}}
-                                {{#if this.display_name '===' "gift option field" }}
-
-                                    {{>components/products/options/custom-option}}
-                                    
-                                {{else}}
-
-                                    {{{dynamicComponent 'components/products/options'}}}
-                                    
-                                {{/if}}
-                            {{/each}}
-                        {{else}}
-                        {{#each product.options}}
-                        {{#if this.display_name '!==' "gift option field" }}
+                    {{#each product.options}}
                         {{{dynamicComponent 'components/products/options'}}}
-                        {{/if}}
-                        {{/each}}
-
-                        {{/if}}
-                    {{else}}
-                        {{#each product.options}}
-                        {{#if this.display_name '!==' "gift option field" }}
-                        {{{dynamicComponent 'components/products/options'}}}
-                        {{/if}}
-                        {{/each}}
-                    {{/if}}
-
+                    {{/each}}
                 </div>
                 <div class="form-field form-field--stock{{#unless product.stock_level}} u-hiddenVisually{{/unless}}">
                     <label class="form-label form-label--alternate">
@@ -293,4 +267,10 @@
     <div class="loadingOverlay"></div>
 </div>
 
-{{json this}}
+{{#if customer}}
+
+<div>Logined !</div>
+<div>{{#if product.price.with_tax}}{{product.price.with_tax.value}}{{else}}{{product.price.without_tax.value}}{{/if}}</div>
+
+
+{{/if}}

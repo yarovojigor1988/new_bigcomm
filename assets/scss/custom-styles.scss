@@ -1,0 +1,119 @@
+
+@media (min-width:801px){
+    .navPages-container{
+        background: #f1f1f1;
+    }
+
+
+
+    .navPages-item>.navPage-subMenu{
+        padding: 0px !important;
+
+        & ul {
+            border: 1px solid #f1f1f1;
+        }
+    }
+
+
+    .navPages-item:hover>.navPage-subMenu{
+        display: block;
+
+        .navPage-subMenu-item:hover{
+            background: #f1f1f1;
+        }
+
+        .navPage-subMenu-item{
+            width: 100%;
+            position: relative;
+            margin: 0;
+            padding: 10px;
+            border-bottom: none;
+
+            &>a{
+                margin: 0;
+                padding: 10px !important;
+                border-bottom: none;
+            }
+
+            .navPage-subMenu-action.has-subMenu::after{
+                content: '>';
+                font-size: 12px;
+            }
+
+            .navPage-childList{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background: #fff;
+                padding: 0px;
+                min-width: 200px;
+            
+
+                .navPage-childList-item{
+
+                    padding: 10px;
+
+                    &>.navPage-childList-action{
+                        padding: 0;
+                    }
+
+                    &:hover{
+                        background: #f1f1f1;
+                    }
+
+                }
+
+
+            }
+
+            &:hover {
+                .navPage-childList{
+                    display: block;
+                   
+                }
+            }
+        }
+    }
+
+}
+
+.custom-slide{
+    padding: 0 10px;
+    position: relative;
+}
+
+
+.slick-custom-slide-text{
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    left: 50%;
+    width: max-content;
+}
+
+// .navPages-item:active, .navPages-item:visited, .navPages-item:hover{
+//     outline: none;
+// }
+
+.custom_slider_section{
+    margin-bottom: 50px;
+}
+
+.custom_slider_section .slick-prev {
+    left: 20px;
+}
+
+.custom_slider_section .slick-next {
+    right: 20px;
+}
+
+.slick-slide {
+    height: auto; // ← that must not be ignored
+  }
+
+.definitionList-value{
+    max-width: 500px;
+}

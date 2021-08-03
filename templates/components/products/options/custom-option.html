@@ -1,0 +1,54 @@
+{{inject "giftOptionId" this.id}}
+
+<div id="custom_options_added">
+  <div>Add gift option ?</div>
+
+  <div style="padding-bottom:20px;">
+      <div data-role="controlgroup" data-type="horizontal" style="border:none">
+        <div>
+          <input type="radio" id="not_show_gift_option" name="myradio" value="not_show_gift_option" checked>
+          <label for="not_show_gift_option">No</label>
+        </div>
+        
+        <div>
+          <input type="radio" id="show_gift_option" name="myradio" value="show_gift_option">
+          <label for="show_gift_option">Add gift option</label>
+        </div>
+      </div>
+        
+  </div>
+
+  <div style="display:none;" class="form-field__custom" data-product-attribute="input-text" id="giftFieldForm">
+      <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_text_{{id}}">
+          {{ this.display_name }}:
+
+          required
+      </label>
+
+      <textarea class="form-input form-input--small" type="text" id="attribute_text_{{id}}" name="attribute[{{this.id}}]" value="{{this.prefill}}" maxlength="1000"></textarea>
+
+      <div style="margin-top:20px" data-role="controlgroup" data-type="horizontal" style="border:none">
+        <div>
+          <input type="radio" id="not_show_gift_email" name="myradio2" value="not_show_gift_email">
+          <label for="not_show_gift_email">Print it on a gift card</label>
+        </div>
+        
+        <div>
+          <input type="radio" id="show_gift_email_option" name="myradio2" value="show_gift_email_option">
+          <label for="show_gift_email_option">Send a congratulation inscription via email</label>
+
+          <div style="display:none;" class="form-field__custom" data-product-attribute="input-text" id="GiftEmailField">
+            <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_text_custom">
+              Еnter email appears (required)
+            </label>
+            <input class="form-input form-input--small" type="email" id="attribute_text_custom_email" name="attribute_custom" value="" maxlength="50" title="Gift email">
+
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<script>
+
+</script>
+

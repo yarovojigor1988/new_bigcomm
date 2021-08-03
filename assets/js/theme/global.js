@@ -16,6 +16,7 @@ import carousel from './common/carousel';
 import loadingProgressBar from './global/loading-progress-bar';
 import svgInjector from './global/svg-injector';
 import { translatePageBuilderValues } from './common/utils/translations-utils';
+// import basicGraphQLQuery from './global/basicGraphQLQuery';
 
 export default class Global extends PageManager {
     onReady() {
@@ -45,9 +46,11 @@ export default class Global extends PageManager {
         }
         loadingProgressBar();
         svgInjector();
+        // basicGraphQLQuery(this.context.storefrontAPIToken);
 
         if (isProductListPresented || isProductCardPresented) {
             translatePageBuilderValues();
         }
+
     }
 }

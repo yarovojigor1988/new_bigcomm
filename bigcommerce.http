@@ -1,0 +1,377 @@
+@ACCESS_TOKEN = jdom1rqcw58nr1r10yaqljov3pkhdmg
+@STORE_HASH = rb77pka1lg
+
+###     "uuid": "c8c4cc6c-705b-40d0-8abe-6d4f5c10b2f6",
+###
+
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values/137
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+PUT https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values/137
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "label": "Add engraving qwe"
+}
+
+
+GET https://api.bigcommerce.com/tores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+PUT https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type": "radio_buttons",
+  "required": true,
+  "sort_order": 1,
+  "option_values": [
+    {
+      "id": 136,
+      "label": "No",
+      "sort_order": 0,
+      "value_data": null,
+      "is_default": false,
+      "adjusters": {
+        "price": {
+          "adjuster": "relative",
+          "adjuster_value": 6
+        },
+        "weight": {
+          "adjuster": "relative",
+          "adjuster_value": 6
+        },
+        "purchasing_disabled": {
+          "status": true,
+          "message": "This product is not available for purchase."
+        }
+      }
+    }
+  ]
+}
+
+GET  https://api.bigcommerce.com/stores/rb77pka1lg/v2/products/152/rules
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+POST  https://api.bigcommerce.com/stores/rb77pka1lg/v2/products/152/rules
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+[
+  {     
+    "price_adjuster": {
+      "adjuster": "relative",
+      "adjuster_value": 2
+    },
+    "weight_adjuster": null,
+    "conditions": [
+      {
+        "product_option_id": 372,
+        "option_value_id": 137,
+        "sku_id": null
+      }
+    ]
+  }
+]
+
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/products/152/rules
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+
+POST  https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/complex-rules
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "product_id": 152,
+  "sort_order": 0,
+  "enabled": true,
+  "stop": false,
+  "purchasing_disabled": false,
+  "purchasing_hidden": false,
+  "price_adjuster": {
+    "adjuster": "relative",
+    "adjuster_value": 2
+  },
+  "weight_adjuster": null,
+  "conditions": [
+    {
+      "id": 54,
+      "rule_id": 54,
+      "modifier_id": 136,
+      "modifier_value_id": 372,
+    }
+  ]
+}
+
+
+
+
+PUT https://api.bigcommerce.com/stores/rb77pka1lg/v2/products/152/rules/20
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "sort_order": 2 
+}
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/complex-rules
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+
+POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/166/metafields
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "permission_set": "app_only",
+  "namespace": "Jisdasd",
+  "key": "keyofsomething",
+  "value": "sdfsdfsdf",
+  "description": "Where products are located"
+}
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/153/metafields
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+ 
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+ 
+
+POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/content/widget-templates
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+ 
+{
+  "name": "Product Widget 3",
+  "storefront_api_query": "query Product{site{newestProducts(first:5){edges{node{name entityId path prices{price{value currencyCode}} defaultImage { url(width: 500, height: 500) }}}}}}",
+  "schema": [
+    {
+      "type": "hidden",
+      "settings": [
+        {
+
+        }
+      ]
+    },
+    {
+      "type": "tab",
+      "label": "Content",
+      "sections": [
+        {
+          "label": "Product",
+          "settings": [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "template": "<div style=\"display:flex;margin:40px 0;\">{{#each _.data.site.newestProducts.edges }}<a href = \"{{ node.path }}\"><div style=\"margin: 0 20px;box-shadow: 1px 1px 10px 2px rgb(0 0 0 /25%);padding: 5px;text-align: center;height: 100%;display: flex;flex-direction: column;justify-content: space-between;\"><h2>{{ node.name }}</h2><img src=\"{{ node.defaultImage.url}}\"><p>{{ node.prices.price.value }} {{ node.prices.price.currencyCode }}</p></div>{{ /each }}</a></div>"
+}
+
+
+# 
+# -------------------------------------------------------
+
+[
+  {
+    "data": [
+      {
+        "phone": "3800999999999",
+        "id": 2,
+      }
+    ] 
+  }
+]
+
+[
+  {
+    "email": "Test@test.com",
+    "first_name": "test",
+    "last_name": "test",
+    "phone": "123456789",
+    "customer_group_id": 0,
+    "addresses": [
+      {
+        "address1": "Addr 1",
+        "address_type": "residential",
+        "city": "San Francisco",
+        "country_code": "US",
+        "first_name": "test",
+        "last_name": "test",
+        "postal_code": "Omit",
+        "state_or_province": "California"
+      }
+    ],
+    "attributes": [
+    ],
+    "authentication": {
+      "force_password_reset": true,
+      "new_password": "sj6893FJK"
+    }
+  }
+]
+
+{
+    "id": 106,
+    "customer_id": 1,
+    "date_created": "Tue, 27 Jul 2021 11:17:27 +0000",
+    "date_modified": "Tue, 27 Jul 2021 11:17:27 +0000",
+    "date_shipped": "",
+    "status_id": 7,
+    "status": "Awaiting Payment",
+    "subtotal_ex_tax": "12.0000",
+    "subtotal_inc_tax": "12.0000",
+    "subtotal_tax": "0.0000",
+    "base_shipping_cost": "0.0000",
+    "shipping_cost_ex_tax": "0.0000",
+    "shipping_cost_inc_tax": "0.0000",
+    "shipping_cost_tax": "0.0000",
+    "shipping_cost_tax_class_id": 2,
+    "base_handling_cost": "0.0000",
+    "handling_cost_ex_tax": "0.0000",
+    "handling_cost_inc_tax": "0.0000",
+    "handling_cost_tax": "0.0000",
+    "handling_cost_tax_class_id": 2,
+    "base_wrapping_cost": "0.0000",
+    "wrapping_cost_ex_tax": "0.0000",
+    "wrapping_cost_inc_tax": "0.0000",
+    "wrapping_cost_tax": "0.0000",
+    "wrapping_cost_tax_class_id": 3,
+    "total_ex_tax": "12.0000",
+    "total_inc_tax": "12.0000",
+    "total_tax": "0.0000",
+    "items_total": 1,
+    "items_shipped": 0,
+    "payment_method": "Check",
+    "payment_provider_id": null,
+    "payment_status": "",
+    "refunded_amount": "0.0000",
+    "order_is_digital": false,
+    "store_credit_amount": "0.0000",
+    "gift_certificate_amount": "0.0000",
+    "ip_address": "159.224.199.55",
+    "geoip_country": "Ukraine",
+    "geoip_country_iso2": "UA",
+    "currency_id": 2,
+    "currency_code": "USD",
+    "currency_exchange_rate": "1.0000000000",
+    "default_currency_id": 2,
+    "default_currency_code": "USD",
+    "staff_notes": "",
+    "customer_message": "",
+    "discount_amount": "0.0000",
+    "coupon_discount": "0.0000",
+    "shipping_address_count": 1,
+    "is_deleted": false,
+    "ebay_order_id": "0",
+    "cart_id": "a8dc39dc-def2-48bd-90bd-181a07ef3c28",
+    "billing_address": {
+        "first_name": "123",
+        "last_name": "123",
+        "company": "123",
+        "street_1": "123",
+        "street_2": "",
+        "city": "Anchorage",
+        "state": "Alaska",
+        "zip": "99508",
+        "country": "United States",
+        "country_iso2": "US",
+        "phone": "123",
+        "email": "yarovojigor1988@gmail.com",
+        "form_fields": []
+    },
+    "is_email_opt_in": false,
+    "credit_card_type": null,
+    "order_source": "www",
+    "channel_id": 1,
+    "external_source": "",
+    "products": {
+        "url": "https://api.bigcommerce.com/stores/rb77pka1lg/v2/orders/106/products",
+        "resource": "/orders/106/products"
+    },
+    "shipping_addresses": {
+        "url": "https://api.bigcommerce.com/stores/rb77pka1lg/v2/orders/106/shipping_addresses",
+        "resource": "/orders/106/shipping_addresses"
+    },
+    "coupons": {
+        "url": "https://api.bigcommerce.com/stores/rb77pka1lg/v2/orders/106/coupons",
+        "resource": "/orders/106/coupons"
+    },
+    "external_id": null,
+    "external_merchant_id": null,
+    "tax_provider_id": "BasicTaxProvider",
+    "customer_locale": "en",
+    "store_default_currency_code": "USD",
+    "store_default_to_transactional_exchange_rate": "1.0000000000",
+    "custom_status": "Awaiting Payment"
+}
+
+
+
+{
+  "billing_address": {
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "street_1": "123 Main Street",
+    "city": "Austin",
+    "state": "Texas",
+    "zip": "78751",
+    "country": "United States",
+    "country_iso2": "US",
+    "email": "janedoe@email.com"
+  },
+  "products": [
+    {
+      "product_id": "166",
+      "quantity": 11
+    }
+  ]
+}
+
+[
+  {
+    "id": 364,
+    "option_id": 278,
+    "display_name": "gift option",
+    "sort_order": 1,
+    "is_required": true
+  }
+]
