@@ -128,16 +128,18 @@
 <script>
 
 function customBandage (jsContext){
-    if (jsContext.myNewBandage === "Sale") {
+
+
+    if (jsContext.myCloseuotBandage === "topleft") {       
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
-                if (el.name === "__badge" && el.value === "Sale") {
+                if (el.name === "__badge" && el.value === "Closeout") {
                     if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.lastElementChild.tagName !== "DIV"){
-                        document.getElementById("product"+jsContext.myProductID).firstElementChild.innerHTML += `<div class="custom_sale-flag-side" style="top:5px">
-                            <span class="custom_sale-text" data-page-builder-key="pdp_custom_new_label" data-default-translation="New">
-                                `+jsContext.mySaleanText+ `
-                            </span>
-                        </div>`
+                        document.getElementById("product"+jsContext.myProductID).firstElementChild.innerHTML += `<div class="closeout-flag-side" style="top:5px">
+                        <span class="closeout-text" data-page-builder-key="pdp_sold_out_label" data-default-translation="Sold Out">
+                            `+jsContext.myCloseuotText+ `
+                        </span>
+                    </div>`
                     }
                 }
             });
@@ -176,16 +178,16 @@ function customBandage (jsContext){
         }
     }
 
-    if (jsContext.myCloseuotBandage === "topleft") {       
+    if (jsContext.myNewBandage === "Sale") {
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
-                if (el.name === "__badge" && el.value === "Closeout") {
+                if (el.name === "__badge" && el.value === "Sale") {
                     if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.lastElementChild.tagName !== "DIV"){
-                        document.getElementById("product"+jsContext.myProductID).firstElementChild.innerHTML += `<div class="closeout-flag-side" style="top:5px">
-                        <span class="closeout-text" data-page-builder-key="pdp_sold_out_label" data-default-translation="Sold Out">
-                            `+jsContext.myCloseuotText+ `
-                        </span>
-                    </div>`
+                        document.getElementById("product"+jsContext.myProductID).firstElementChild.innerHTML += `<div class="custom_sale-flag-side" style="top:5px">
+                            <span class="custom_sale-text" data-page-builder-key="pdp_custom_new_label" data-default-translation="New">
+                                `+jsContext.mySaleanText+ `
+                            </span>
+                        </div>`
                     }
                 }
             });
