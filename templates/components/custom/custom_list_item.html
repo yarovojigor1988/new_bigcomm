@@ -127,7 +127,7 @@ function customBandage (jsContext){
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
                 if (el.name === "__badge" && el.value === "Closeout") {
-                    if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    if ( document.getElementById("product"+jsContext.myProductID).lastElementChild.tagName !== "DIV"){
                         document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="closeout-flag-side" style="top:5px">
                         <span class="closeout-text" data-page-builder-key="pdp_sold_out_label" data-default-translation="Sold Out">
                             `+jsContext.myCloseuotText+ `
@@ -143,7 +143,7 @@ function customBandage (jsContext){
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
                 if (el.name === "__badge" && el.value === "New") {
-                    if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    if ( document.getElementById("product"+jsContext.myProductID).lastElementChild.tagName !== "DIV"){
                         document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="custom_new-flag-side" style="top:5px">
                             <span class="custom_new-text" data-page-builder-key="pdp_custom_new_label" data-default-translation="New">
                                 `+jsContext.myNewBanText+ `
@@ -159,7 +159,7 @@ function customBandage (jsContext){
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
                 if (el.name === "__badge" && el.value === "FreeShipping") {
-                    if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    if ( document.getElementById("product"+jsContext.myProductID).lastElementChild.tagName !== "DIV"){
                         document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="free_shipping-flag-side" style="top:5px">
                         <span class="free_shipping-text" data-page-builder-key="pdp_free_shipping_label" data-default-translation="Free Shipping">
                             `+jsContext.myFreeShipText+ `
@@ -175,7 +175,7 @@ function customBandage (jsContext){
         if (jsContext.myProductCustomFields){
             jsContext.myProductCustomFields.forEach(el => {
                 if (el.name === "__badge" && el.value === "Sale") {
-                    if ( document.getElementById("product"+jsContext.myProductID).firstElementChild.tagName !== "DIV"){
+                    if ( document.getElementById("product"+jsContext.myProductID).lastElementChild.tagName !== "DIV"){
                         document.getElementById("product"+jsContext.myProductID).innerHTML += `<div class="custom_sale-flag-side" style="top:5px">
                             <span class="custom_sale-text" data-page-builder-key="pdp_custom_new_label" data-default-translation="New">
                                 `+jsContext.mySaleanText+ `
