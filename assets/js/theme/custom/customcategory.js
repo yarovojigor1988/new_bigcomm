@@ -5,7 +5,7 @@ export default class CustomDemo extends PageManager {
 
 
         if(document.getElementById("custom_options_added")){
-
+            console.log(this.context);
             let giftOptionId = "attribute_text_"+this.context.giftOptionId;
             console.log(giftOptionId);
 
@@ -128,5 +128,17 @@ export default class CustomDemo extends PageManager {
         document.getElementById("form-action-addToCart").addEventListener('click', checkGiftTextSubmitted, false); 
         document.getElementById("previewModal").addEventListener('click', checkCloseCart, false); 
         }
+        let option1 = document.getElementById('attribute_text_116');
+    
+        let option2 = document.getElementById('attribute_select_117');
+        let option2_text  = document.getElementById('attribute_select_117').selectedOptions[0].text;
+
+        let peremennaya = this.context.piclistID;
+
+        option1.addEventListener('change', function(){
+            let length1 = this.value.length;
+            console.log(length1);
+            document.getElementById('attribute_select_117').selectedIndex = length1;            
+        });
     } 
 }
