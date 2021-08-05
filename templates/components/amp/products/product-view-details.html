@@ -102,8 +102,10 @@
             {{/if}}
 
             {{#each product.custom_fields}}
+                {{#if name '!==' '__badge'}}
                 <dt class="productView-info-name">{{name}}:</dt>
                 <dd class="productView-info-value">{{{value}}}</dd>
+                {{/if}}
             {{/each}}
         </dl>
     </div>

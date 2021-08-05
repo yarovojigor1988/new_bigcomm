@@ -5,10 +5,95 @@
 ###
 
 
-GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values/137
+
+POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers
 X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
 Content-Type: application/json
 Accept: application/json
+
+{
+  "type": "checkbox",
+  "required": false,
+  "display_name": "Add a $5 Donation",
+  "config": {
+    "default_value": "Yes",
+    "checked_by_default": false,
+    "checkbox_label": "Check for Donation"
+  }
+}
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers/387/values/188
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+
+PUT https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers/383/values/188
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+    "id": 188,
+}
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+GET https://yarovojigor.mybigcommerce.com/api/storefront/carts
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+
+POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/151/modifiers
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "type":"checkbox",
+  "required":false,
+  "config":{
+  "default_value":"Yes",
+  "checked_by_default":false,
+  "checkbox_label":"Check for Donation"
+  },
+  "display_name":"Add a $5 Donation"
+}
+
+GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values
+X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+Content-Type: application/json
+Accept: application/json
+
+{
+  "is_default": false,
+  "label": "Add engraving 2",
+  "sort_order": 2,
+  "value_data": null,
+    "adjusters": {
+      "price": null,
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  }
+}
+
+
 
 
 PUT https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/152/modifiers/372/values/137

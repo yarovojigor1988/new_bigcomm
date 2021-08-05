@@ -22,6 +22,7 @@ export default class Cart extends PageManager {
 
         this.setApplePaySupport();
         this.bindEvents();
+        console.log(this.$cartTotals);
     }
 
     setApplePaySupport() {
