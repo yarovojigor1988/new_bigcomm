@@ -1238,14 +1238,6 @@
           {
             "value": "topleft",
             "label": "i18n.TopLeft"
-          },
-          {
-            "value": "sash",
-            "label": "i18n.Diagonal"
-          },
-          {
-            "value": "burst",
-            "label": "i18n.Burst"
           }
         ]
       },

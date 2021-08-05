@@ -313,7 +313,7 @@
     "color_text_product_closeout_badges": "#000000",
     "color_badge_product_closeout_badges": "#29AC11",
     "color_hover_product_closeout_badges": "#EE0000",
-    "product_custom_sale_badges": "burst",
+    "product_custom_sale_badges": "topleft",
     "color_text_product_sale_custom_badges": "#FFFFFF",
     "color_badge_product_sale_custom_badges": "#D14343",
     "color_hover_product_custom_sale_badges": "#000000",
