@@ -5,9 +5,7 @@ export default class CustomDemo extends PageManager {
 
 
         if(document.getElementById("custom_options_added")){
-            console.log(this.context);
             let giftOptionId = "attribute_text_"+this.context.giftOptionId;
-            console.log(giftOptionId);
 
         function showGiftTextField() {
             let element = document.getElementById('giftFieldForm');
@@ -83,7 +81,7 @@ export default class CustomDemo extends PageManager {
         }
 
         function checkCloseCart(e){
-            console.log(e.target.dataset);
+
             if (e.target.classList.contains('modal-close') || e.target.parentElement.classList.contains('modal-close')){
                 clearCustomData();
             };
@@ -95,10 +93,6 @@ export default class CustomDemo extends PageManager {
         function checkCloseCart2(e){
             if (e.target.classList.contains('modal-background') && document.getElementById('previewModal').style.display == "block" ){
                 clearCustomData();
-            }
-
-            if (e.target.classList.contains('modal-background')){
-                console.log(document.getElementById('previewModal').style.display);
             }
         }
 
@@ -136,7 +130,6 @@ export default class CustomDemo extends PageManager {
 
             let engravingPriceId = "attribute_select_"+this.context.engravingPriceId;
 
-            console.log(engravingPriceId);
             function checkengravingText (){
 
                 let patternstr = '^[A-Za-z0-9., \n]{0,200}$';
@@ -173,14 +166,12 @@ export default class CustomDemo extends PageManager {
             document.getElementById("not_show_engraving_option").addEventListener('change', hideEngravingTextField, false); 
             document.getElementById("show_engraving_option").addEventListener('change', showEngravingTextField, false); 
 
-            console.log(engravingPriceId);
-
             let option1 = document.getElementById(engravingOptionId);
 
     
             option1.addEventListener('change', function(){
                 checkengravingText ();
-                let length1 = this.value.length;
+                let length1 = this.value.replace(/\s+/g, '').length;
                 document.getElementById(engravingPriceId).selectedIndex = length1;            
             });
         
@@ -188,3 +179,4 @@ export default class CustomDemo extends PageManager {
 
     } 
 }
+// 
