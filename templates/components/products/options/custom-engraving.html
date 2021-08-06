@@ -1,0 +1,27 @@
+{{inject "engravingOptionId" this.id}}
+
+<div id="engraving_options_added">
+  <div>Add engraving ?</div>
+  <div style="padding-bottom:20px;">
+      <div data-role="controlgroup_engraving" data-type="horizontal" style="border:none">
+        <div>
+          <input type="radio" id="not_show_engraving_option" name="myradio_engraving" value="not_show_engraving_option" checked>
+          <label for="not_show_engraving_option">No</label>
+        </div>
+        
+        <div>
+          <input type="radio" id="show_engraving_option" name="myradio_engraving" value="show_engraving_option">
+          <label for="show_engraving_option">Add engraving</label>
+        </div>
+      </div>      
+  </div>
+
+  <div style="display:none;" class="form-field__custom" data-product-attribute="input-text" id="engravingFieldForm">
+      <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_text_{{id}}">
+          {{ this.display_name }}:
+
+          required
+      </label>
+      <input class="form-input form-input--small" type="text" id="attribute_text_{{id}}" name="attribute[{{this.id}}]" value="{{this.prefill}}" maxlength="200">
+  </div>
+</div>

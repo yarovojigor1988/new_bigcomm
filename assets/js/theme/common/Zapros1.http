@@ -1,0 +1,914 @@
+
+
+POST https://api.bigcommerce.com/stores/6aqlc3mjne/v3/catalog/products/112/modifiers
+X-Auth-Token: kz7gtwy205fcpy3gc68ot72rhie0cq2
+Content-Type: application/json
+Accept: application/json
+
+{
+"display_name": "Engraving price",
+"type": "dropdown",
+"required": false,
+"option_values": [
+  {
+    "label": "2",
+    "sort_order": "0",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "2"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "4",
+    "sort_order": "1",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "4"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "6",
+    "sort_order": "2",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "6"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "8",
+    "sort_order": "3",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "8"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "10",
+    "sort_order": "4",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "10"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "12",
+    "sort_order": "5",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "12"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "14",
+    "sort_order": "6",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "14"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "16",
+    "sort_order": "7",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "16"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "18",
+    "sort_order": "8",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "18"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "20",
+    "sort_order": "9",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "20"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "22",
+    "sort_order": "10",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "22"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "24",
+    "sort_order": "11",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "24"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "26",
+    "sort_order": "12",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "26"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "28",
+    "sort_order": "13",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "28"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "30",
+    "sort_order": "14",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "30"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "32",
+    "sort_order": "15",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "32"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "34",
+    "sort_order": "16",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "34"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "36",
+    "sort_order": "17",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "36"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "38",
+    "sort_order": "18",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "38"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "40",
+    "sort_order": "19",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "40"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "42",
+    "sort_order": "20",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "42"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "44",
+    "sort_order": "21",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "44"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "46",
+    "sort_order": "22",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "46"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "48",
+    "sort_order": "23",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "48"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "50",
+    "sort_order": "24",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "50"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "52",
+    "sort_order": "25",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "52"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "54",
+    "sort_order": "26",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "54"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "56",
+    "sort_order": "27",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "56"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "58",
+    "sort_order": "28",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "58"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "60",
+    "sort_order": "29",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "60"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "62",
+    "sort_order": "30",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "62"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "64",
+    "sort_order": "31",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "64"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "66",
+    "sort_order": "32",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "66"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "68",
+    "sort_order": "33",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "68"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "70",
+    "sort_order": "34",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "70"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "72",
+    "sort_order": "35",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "72"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "74",
+    "sort_order": "36",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "74"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "76",
+    "sort_order": "37",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "76"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "78",
+    "sort_order": "38",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "78"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "80",
+    "sort_order": "39",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "80"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "82",
+    "sort_order": "40",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "82"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "84",
+    "sort_order": "41",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "84"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "86",
+    "sort_order": "42",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "86"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "88",
+    "sort_order": "43",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "88"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "90",
+    "sort_order": "44",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "90"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "92",
+    "sort_order": "45",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "92"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "94",
+    "sort_order": "46",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "94"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "96",
+    "sort_order": "47",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "96"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "98",
+    "sort_order": "48",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "98"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  },
+  {
+    "label": "100",
+    "sort_order": "49",
+    "value_data": null,
+    "is_default": false,
+    "adjusters": {
+      "price": {
+        "adjuster": "relative",
+        "adjuster_value": "100"
+      },
+      "weight": null,
+      "image_url": "",
+      "purchasing_disabled": {
+        "status": false,
+        "message": ""
+      }
+    }
+  }
+]
+}
