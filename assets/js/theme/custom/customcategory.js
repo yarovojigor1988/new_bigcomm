@@ -114,31 +114,77 @@ export default class CustomDemo extends PageManager {
         function checkGiftTextSubmitted(){
             if (document.getElementById('not_show_gift_option').checked === true) {
                 document.getElementById(giftOptionId).value ="";
+
             } else if (document.getElementById('show_gift_email_option').checked === false && document.getElementById(giftOptionId).value !== "" && document.getElementById(giftOptionId).dataset.validated ==="true" ){
                 document.getElementById(giftOptionId).value +="\n Print congratulatory on a gift card";
 
-            }else if (document.getElementById('show_gift_email_option').checked === true && document.getElementById(giftOptionId).value !== "" && document.getElementById("attribute_text_custom_email").dataset.validated ==="true"){
+            } else if (document.getElementById('show_gift_email_option').checked === true && document.getElementById(giftOptionId).value !== "" && document.getElementById("attribute_text_custom_email").dataset.validated ==="true"){
                 document.getElementById(giftOptionId).value +="\n" + "Send congratulatory on Email:" + document.getElementById('attribute_text_custom_email').value;
 
             }
+
             document.body.addEventListener('click', checkCloseCart2, false); 
-            console.log(document.getElementById(giftOptionId).value);
         };
 
         document.getElementById("form-action-addToCart").addEventListener('click', checkGiftTextSubmitted, false); 
         document.getElementById("previewModal").addEventListener('click', checkCloseCart, false); 
         }
-        let option1 = document.getElementById('attribute_text_116');
+
+        if(document.getElementById("engraving_options_added")){
+
+            let engravingOptionId = "attribute_text_"+this.context.engravingOptionId;
+
+            let engravingPriceId = "attribute_select_"+this.context.engravingPriceId;
+
+            console.log(engravingPriceId);
+            function checkengravingText (){
+
+                let patternstr = '^[A-Za-z0-9., \n]{0,200}$';
+                let engravingText = document.getElementById(engravingOptionId);
+                let constraint = new RegExp(patternstr, "");
+                if (engravingText.value.length > 50) {
+                    engravingText.setCustomValidity("Too much symbols. Please, make your text shorter. 50 symbols maximum.");
+                    engravingText.dataset.validated="false";
+                } else if (constraint.test(engravingText.value)) {
+                    engravingText.setCustomValidity("");
+                    engravingText.dataset.validated="true";
+                }
+                else {
+                    engravingText.setCustomValidity("Unknown or restricted symbol: A congratulatory inscription should consist of letters, commas, and dots.");
+                    engravingText.dataset.validated="false";
+                }
+            }
+
+            function showEngravingTextField() {
+                let element = document.getElementById('engravingFieldForm');
+                element.style.display = "block";
+                document.getElementById(engravingOptionId).setAttribute("required", "");
+                element.required = true; 
+            }
+            
+            function hideEngravingTextField() {
+                document.getElementById('engravingFieldForm').style.display = "none";
+                document.getElementById(engravingOptionId).value = "";
+                document.getElementById(engravingPriceId).selectedIndex = 0;
+                document.getElementById(engravingOptionId).removeAttribute("required");
+                document.getElementById('attribute_text_custom_email').removeAttribute("required");
+            }
+            
+            document.getElementById("not_show_engraving_option").addEventListener('change', hideEngravingTextField, false); 
+            document.getElementById("show_engraving_option").addEventListener('change', showEngravingTextField, false); 
+
+            console.log(engravingPriceId);
+
+            let option1 = document.getElementById(engravingOptionId);
+
     
-        let option2 = document.getElementById('attribute_select_117');
-        let option2_text  = document.getElementById('attribute_select_117').selectedOptions[0].text;
+            option1.addEventListener('change', function(){
+                checkengravingText ();
+                let length1 = this.value.length;
+                document.getElementById(engravingPriceId).selectedIndex = length1;            
+            });
+        
+        }
 
-        let peremennaya = this.context.piclistID;
-
-        option1.addEventListener('change', function(){
-            let length1 = this.value.length;
-            console.log(length1);
-            document.getElementById('attribute_select_117').selectedIndex = length1;            
-        });
     } 
 }

@@ -1,4 +1,4 @@
-<div class="form-field" data-product-attribute="set-select">
+<div class="form-field" data-product-attribute="set-select" {{#if this.display_name '===' 'Engraving price'}}style="display:none"{{/if}}>
     <label class="form-label form-label--alternate form-label--inlineSmall" for="attribute_select_{{id}}">
         {{ this.display_name }}:
 
@@ -12,3 +12,7 @@
         {{/each}}
     </select>
 </div>
+
+{{#if this.display_name '===' 'Engraving price'}}
+    {{inject "engravingPriceId" this.id}}
+{{/if}}

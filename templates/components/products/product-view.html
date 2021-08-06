@@ -227,13 +227,11 @@
                 <input type="hidden" name="action" value="add">
                 <input type="hidden" name="product_id" value="{{product.id}}"/>
                 <div data-product-option-change style="display:none;">
-                    <div>123123123123123</div>
                     {{inject 'showSwatchNames' theme_settings.show_product_swatch_names}}
                     {{#if customer}}
                         {{#if product.price.without_tax.value '>=' 50}}
                             {{#each product.options}}
 
-                                {{this.display_name}}
                                 {{#if this.display_name '===' "gift option field" }}
 
                                     {{>components/products/options/custom-option}}
@@ -266,7 +264,11 @@
                         {{/if}}
                     {{else}}
                         {{#each product.options}}
-                        {{#if this.display_name '!==' "gift option field" }}
+                        {{#if this.display_name '===' "gift option field" }}
+                        <div></div>
+                        {{else if this.display_name '===' "Engraving text" }}
+                        <div></div>
+                        {{else}}
                         {{{dynamicComponent 'components/products/options'}}}
                         {{/if}}
                         {{/each}}
