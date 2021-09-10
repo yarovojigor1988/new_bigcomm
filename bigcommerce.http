@@ -1,26 +1,17 @@
 @ACCESS_TOKEN = kz7gtwy205fcpy3gc68ot72rhie0cq2
-@STORE_HASH = rb77pka1lg
+@STORE_HASH = 6aqlc3mjne
 
 ###     "uuid": "c8c4cc6c-705b-40d0-8abe-6d4f5c10b2f6",
 ###
 
 
 
-POST https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers
-X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
+GET https://api.bigcommerce.com/stores/6aqlc3mjne/v3/catalog/products/115/modifiers
+X-Auth-Token: kz7gtwy205fcpy3gc68ot72rhie0cq2
 Content-Type: application/json
 Accept: application/json
 
-{
-  "type": "checkbox",
-  "required": false,
-  "display_name": "Add a $5 Donation",
-  "config": {
-    "default_value": "Yes",
-    "checked_by_default": false,
-    "checkbox_label": "Check for Donation"
-  }
-}
+
 
 GET https://api.bigcommerce.com/stores/rb77pka1lg/v3/catalog/products/155/modifiers/387/values/188
 X-Auth-Token: jdom1rqcw58nr1r10yaqljov3pkhdmg
@@ -429,34 +420,22 @@ Accept: application/json
     "custom_status": "Awaiting Payment"
 }
 
-
-
-{
-  "billing_address": {
-    "first_name": "Jane",
-    "last_name": "Doe",
-    "street_1": "123 Main Street",
-    "city": "Austin",
-    "state": "Texas",
-    "zip": "78751",
-    "country": "United States",
-    "country_iso2": "US",
-    "email": "janedoe@email.com"
-  },
-  "products": [
-    {
-      "product_id": "166",
-      "quantity": 11
-    }
-  ]
+function get_name_browser(){
+    // получаем данные userAgent
+    var ua = navigator.userAgent;    
+    // с помощью регулярок проверяем наличие текста,
+    // соответствующие тому или иному браузеру
+    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+    if (ua.search(/Firefox/) > 0) return 'Firefox';
+    if (ua.search(/Opera/) > 0) return 'Opera';
+    if (ua.search(/Safari/) > 0) return 'Safari';
+    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    // условий может быть и больше.
+    // сейчас сделаны проверки только 
+    // для популярных браузеров
+    return 'Не определен';
 }
-
-[
-  {
-    "id": 364,
-    "option_id": 278,
-    "display_name": "gift option",
-    "sort_order": 1,
-    "is_required": true
-  }
-]
+ 
+// пример использования
+var browser = get_name_browser();
+alert(browser);

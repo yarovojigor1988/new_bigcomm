@@ -55,6 +55,7 @@ const pageClasses = {
 const customClasses = {
     'pages/home': () => import('./theme/custom/CustomJS'), 
     'pages/product': () => import('./theme/custom/customcategory'), 
+    'pages/checkout': () => import('./theme/custom/customCheckout'), 
 
 };
 

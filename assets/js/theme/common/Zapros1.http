@@ -1,6 +1,4 @@
-
-
-POST https://api.bigcommerce.com/stores/6aqlc3mjne/v3/catalog/products/112/modifiers
+POST https://api.bigcommerce.com/stores/6aqlc3mjne/v3/catalog/products/{{product-id}}/modifiers
 X-Auth-Token: kz7gtwy205fcpy3gc68ot72rhie0cq2
 Content-Type: application/json
 Accept: application/json
